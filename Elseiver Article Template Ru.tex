@@ -1,0 +1,72 @@
+%% Common template of the research article using elsarticle-ru class.
+%% The elsarticle-ru class is russian translation of the original elsarticle class provided by Elseiver (see http://www.elsevier.com/author-schemas/latex-instructions).
+%% 
+%% Author: Dmitriy O. Afanasyev
+%% Email: dmafanasyev@gmail.com
+%% Web: http://dmafanasyev.ru
+%% Version: 1.0, Feb 04, 2015
+%% 
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+
+\documentclass[3p,11pt,authoryear]{elsarticle-ru}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{epstopdf,cmap,amssymb,amsfonts,amsmath,mathtext,enumerate,float,natbib,indentfirst,hyperref,graphicx,multirow,setspace}
+% pscyr used for good quality russian font rendering. See http://blog.harrix.org/?p=444 for the full installing instruction of pscyr. 
+\usepackage{pscyr}
+
+\graphicspath{{figures/ru/}}
+
+\journal{Название журнала}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% title, authors, affilations
+\input{chapters/ru/Title}
+
+%% abstract
+\begin{abstract}
+\input{chapters/ru/Abstract}
+\end{abstract}
+
+%% keywords
+\begin{keyword}
+\input{chapters/ru/Keywords}
+\end{keyword}
+
+\end{frontmatter}
+
+%% main text
+\input{chapters/ru/Introduction}
+
+\input{chapters/ru/Methodology}
+
+\input{chapters/ru/Data}
+
+\input{chapters/ru/Results}
+
+\input{chapters/ru/Conclusion}
+
+\input{chapters/ru/Acknowledgement}
+
+\appendix
+\input{chapters/ru/Appendix}
+
+%% bibliography
+\phantomsection
+\addcontentsline{toc}{section}{Список литературы}
+\section*{Список литературы}
+\bibliographystyle{elsarticle-harv-ru}
+\bibliography{biblio}
+\end{document}
